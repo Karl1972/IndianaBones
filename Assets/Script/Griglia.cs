@@ -118,7 +118,9 @@ namespace IndianaBones
                     SpriteRenderer muro = scacchiera[i, j].GetComponent<SpriteRenderer>();
                     muro.sprite = Resources.Load("pavimento", typeof(Sprite)) as Sprite;
                     scacchiera[i, j].status = 0;
-                    scacchiera[i, j].gameObject.AddComponent<BoxCollider2D>();
+                    BoxCollider2D lop;
+                    lop = scacchiera[i, j].GetComponent<BoxCollider2D>();
+                    lop.enabled = false;
                 }
             }
 
